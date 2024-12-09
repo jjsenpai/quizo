@@ -1,37 +1,75 @@
 {
-    "name": "quizo",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev --turbopack",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "prepare": "husky"
+  "name": "quizo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/icons-material": "^6.1.10",
+    "@mui/material": "^6.1.10",
+    "@mui/material-nextjs": "^6.1.9",
+    "@mui/x-data-grid": "^7.23.1",
+    "jose": "^5.9.6",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-toastify": "^10.0.6",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "husky": "^9.1.6",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*": [
+      "next lint",
+      "npx prettier --write ."
+    ]
+  },
+  "overrides": {
+    "@mui/x-data-grid": {
+      "react": "^19.0.0-rc-66855b96-20241106",
+      "react-dom": "^19.0.0-rc-66855b96-20241106"
     },
-    "dependencies": {
-        "jose": "^5.9.6",
-        "next": "15.0.3",
-        "react": "19.0.0-rc-66855b96-20241106",
-        "react-dom": "19.0.0-rc-66855b96-20241106"
+    "@mui/material": {
+      "react": "^19.0.0-rc-66855b96-20241106",
+      "react-dom": "^19.0.0-rc-66855b96-20241106"
     },
-    "devDependencies": {
-        "@types/node": "^20",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
-        "eslint": "^8",
-        "eslint-config-next": "15.0.3",
-        "husky": "^9.1.6",
-        "postcss": "^8",
-        "prettier": "^3.3.3",
-        "prettier-plugin-tailwindcss": "^0.6.8",
-        "tailwindcss": "^3.4.1",
-        "typescript": "^5"
+    "@emotion/react": {
+      "react": "^19.0.0-rc-66855b96-20241106",
+      "react-dom": "^19.0.0-rc-66855b96-20241106"
     },
-    "lint-staged": {
-        "*": [
-            "next lint",
-            "npx prettier --write ."
-        ]
+    "@emotion/styled": {
+      "react": "^19.0.0-rc-66855b96-20241106",
+      "react-dom": "^19.0.0-rc-66855b96-20241106"
+    },
+    "@mui/material-nextjs": {
+      "react": "^19.0.0-rc-66855b96-20241106",
+      "react-dom": "^19.0.0-rc-66855b96-20241106"
+    },
+    "@mui/icons-material": {
+      "react": "^19.0.0-rc-66855b96-20241106",
+      "react-dom": "^19.0.0-rc-66855b96-20241106"
+    },
+    "react-toastify": {
+      "react": "^19.0.0-rc-66855b96-20241106",
+      "react-dom": "^19.0.0-rc-66855b96-20241106"
     }
+  }
 }

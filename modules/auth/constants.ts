@@ -4,6 +4,7 @@ export const EMAIL_COOKIE_NAME = "email";
 
 export const BACKEND_AUTH_URLS = {
   LOGIN: "/auth/login",
+  SIGNUP: "/auth/signup",
   FORGOT_PASSWORD: "/auth/forgot-password",
   RESET_PASSWORD: "/auth/reset-password",
 };

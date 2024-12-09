@@ -1,3 +1,7 @@
-export default function page() {
-  return <p className="font-primary">Attempt a Quiz.</p>;
-}
+import { Attempt } from "@/modules/attempt/attempt";
+
+const page = () => {
+  return <Attempt />;
+};
+
+export default page;

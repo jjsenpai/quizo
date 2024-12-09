@@ -1,6 +1,18 @@
+import { UserType } from "@/lib/constants";
+
 export interface ILoginData {
   email_id: string;
   password: string;
+  role: string;
+}
+
+export interface ISignupData {
+  email_id: string;
+  name: string;
+  password: string;
+  dob: string;
+  institute: string;
+  role: UserType;
 }
 
 export interface ILoginResponse {

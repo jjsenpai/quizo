@@ -1,3 +1,7 @@
-export default function page() {
-  return <p className="font-primary">Create a Quiz.</p>;
-}
+import { Create } from "@/modules/create/create";
+
+const page = () => {
+  return <Create />;
+};
+
+export default page;
