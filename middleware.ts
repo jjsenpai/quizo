@@ -26,19 +26,14 @@ export default async function middleware(req: NextRequest) {
   } catch {
     verifiedToken = null;
   }
-
   if (!verifiedToken && !isPublicRoute) {
-    console.log(1);
     await deleteSession();
     return NextResponse.redirect(new URL("/", req.nextUrl));
   } else if (verifiedToken && !verifiedToken.iad && isAdminRoute) {
-    console.log(2);
     return NextResponse.redirect(new URL("/", req.nextUrl));
   } else if (verifiedToken?.role === UserType.Teacher && isPublicRoute) {
-    console.log(3);
     return NextResponse.redirect(new URL("/create", req.nextUrl));
   } else if (verifiedToken?.role === UserType.User && isPublicRoute) {
-    console.log(4);
     return NextResponse.redirect(new URL("/attempt", req.nextUrl));
   }
 

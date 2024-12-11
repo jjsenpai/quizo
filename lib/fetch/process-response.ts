@@ -16,11 +16,12 @@ export const processResponse = async <TResponse>(
       throw new ClientError(response.status, data);
     }
   }
-
+  console.log(response);
   if (response.ok) {
     return (await response.json()) as TResponse;
   }
 
   const data = (await response.json()) as ErrorResponse;
+  console.log(1, data);
   throw new ClientError(response.status, data);
 };

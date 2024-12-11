@@ -1,9 +1,9 @@
 import { getAllExams } from "@/lib/actions/quiz";
-import { Create } from "@/modules/create/create";
+import { Events } from "@/modules/create/views/events/events";
 
 const page = async () => {
   const { data: response } = await getAllExams();
-  return <Create response={response} />;
+  return <Events response={response} />;
 };
 
 export default page;

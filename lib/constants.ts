@@ -11,3 +11,10 @@ export enum UserType {
   User = "attempt",
   Admin = "ADMIN",
 }
+
+export enum QuizType {
+  Upcoming = "upcoming",
+  Due = "no_result",
+  Ok = "complete",
+  Ongoing = "ongoing",
+}
