@@ -45,7 +45,7 @@ export const Events = ({ response }: { response: GetAllExamsResponse }) => {
         </div>
       </div>
       <div className="flex flex-col gap-6 text-[22px] font-bold leading-tight tracking-tight text-gray-900">
-        <h1>Incomplete quizes</h1>
+        <h1>Incomplete quizzes</h1>
         <div className="flex flex-col gap-6 text-[16px] font-normal">
           {incompleteQuizes.length > 0 ? (
             incompleteQuizes.map((quiz, idx) => (
@@ -72,7 +72,7 @@ export const Events = ({ response }: { response: GetAllExamsResponse }) => {
       </div>
       <div className="flex flex-col gap-6 pt-6 text-[22px] font-bold leading-tight tracking-tight text-gray-900">
         <div className="flex items-center justify-between">
-          <h1>Past quizes</h1>
+          <h1>Past quizzes</h1>
         </div>
         <div className="flex flex-col gap-6 text-[16px] font-normal">
           {pastQuizzes.length > 0 ? (
@@ -97,9 +97,11 @@ export const Events = ({ response }: { response: GetAllExamsResponse }) => {
                     Completed
                   </span>
                 )}
-                <div className="mt-1 size-6 shrink-0">
+                <Link
+                  href={`/create/events/modify?id=${quiz.id}`}
+                  className="mt-1 size-6 shrink-0">
                   <Image src={Edit as string} alt="edit" />
-                </div>
+                </Link>
               </div>
             ))
           ) : (
