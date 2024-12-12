@@ -13,6 +13,7 @@ import { v4 as uuidv4 } from "uuid";
 import { CustomCheck } from "@/lib/components/checkbox";
 import { LoaderWith3Dots } from "@/lib/components/loader";
 import { UpdateExam } from "@/modules/create/api/action";
+import { Share } from "@mui/icons-material";
 
 export const Modify = ({ details }: { details: IUpdateExamResponse }) => {
   const [questions, setQuestions] = useState<IQuestionRequest[]>(details.questions);
@@ -29,6 +30,15 @@ export const Modify = ({ details }: { details: IUpdateExamResponse }) => {
             <Image src={Back as string} alt="<" />
           </Link>
           <h1>Modify</h1>
+          <button
+            type="button"
+            onClick={() => {
+              navigator.clipboard.writeText(
+                `quizzo.chotahathi.com/attempt/quiz?id=${details.id}`,
+              );
+            }}>
+            <Share />
+          </button>
         </div>
         <div className="flex h-full flex-col gap-6 overflow-y-auto pb-16">
           <div className="flex flex-col gap-4 text-[22px] font-bold leading-tight tracking-tight text-gray-900">
